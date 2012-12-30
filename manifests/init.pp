@@ -1,6 +1,6 @@
 class certtool {
   case $::operatingsystem {
-    'debian' : { include certtool::debian }
-    default : { include certtool::base }
+    'debian' : { require certtool::debian }
+    default : { require certtool::base }
   }
 }
